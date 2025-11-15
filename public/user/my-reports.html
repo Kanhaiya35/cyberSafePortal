@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Reports | CyberSafe Portal</title>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- GLOBAL STYLES (Navbar, Variables, Buttons, Layout) -->
+  <link rel="stylesheet" href="../css/user-style.css">
+
+  <!-- TABLE STYLES -->
+  <link rel="stylesheet" href="../css/my-reports.css">
+
+  <!-- JS -->
+  <script src="../js/my-reports.js" defer></script>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+
+      <!-- Logo -->
+      <a href="dashboard.html" class="logo">
+        <i class="fas fa-shield-alt"></i> CyberSafe
+      </a>
+
+      <!-- Main navigation -->
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="track-case.html">Track Case</a></li>
+        <li><a href="my-reports.html" class="active">My Reports</a></li>
+      </ul>
+
+      <!-- Right-side buttons -->
+      <div class="nav-actions">
+        <a href="profile.html" class="btn btn-outline">
+          <i class="fas fa-user-circle"></i> Profile
+        </a>
+
+        <a href="../index.html" class="btn btn-outline">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </div>
+
+      <!-- Mobile Menu Icon -->
+      <div class="mobile-menu-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="container">
+    <h1>My Submitted Reports</h1>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Token ID</th>
+          <th>Type</th>
+          <th>Date Filed</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populated by JS -->
+      </tbody>
+    </table>
+  </main>
+
+</body>
+</html>

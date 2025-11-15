@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track Case | CyberSafe Portal</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Global Style -->
+  <link rel="stylesheet" href="../css/user-style.css">
+
+  <!-- Track Page Style -->
+  <link rel="stylesheet" href="../css/track-case.css">
+
+  <script src="../js/track-case.js" defer></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+      <a href="dashboard.html" class="logo"><i class="fas fa-shield-alt"></i> CyberSafe</a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="track-case.html" class="active">Track Case</a></li>
+        <li><a href="my-reports.html">My Reports</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="profile.html" class="btn btn-outline"><i class="fas fa-user"></i> Profile</a>
+        <a href="../index.html" class="btn btn-outline"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container track-container">
+
+    <h1>Track Your Case</h1>
+    <p class="subtitle">Enter your token ID to check the status of your cybercrime report.</p>
+
+    <form id="trackForm" class="track-form">
+      <input id="tokenInput" type="text" placeholder="Enter your Token ID" required>
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-search"></i> Track
+      </button>
+    </form>
+
+    <!-- Status Result Box -->
+    <div id="resultBox" class="result-box" style="display:none">
+      <h3>Case Status</h3>
+      <p><strong>Token ID:</strong> <span id="resToken"></span></p>
+      <p><strong>Incident Type:</strong> <span id="resType"></span></p>
+      <p><strong>Date Filed:</strong> <span id="resDate"></span></p>
+      <p><strong>Current Status:</strong> <span id="resStatus" class="status-badge"></span></p>
+
+      <h3 style="margin-top:25px;">Case Progress</h3>
+      <div id="caseSteps" class="timeline"></div>
+    </div>
+
+</main>
+
+
+</body>
+</html>

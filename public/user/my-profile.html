@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Profile | CyberSafe Portal</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/user-style.css">
+  <link rel="stylesheet" href="../css/profile.css">
+
+  <script src="../js/profile.js" defer></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+      <a href="dashboard.html" class="logo"><i class="fas fa-shield-alt"></i> CyberSafe</a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="my-reports.html">My Reports</a></li>
+        <li><a href="track-case.html">Track Case</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="profile.html" class="btn btn-outline active"><i class="fas fa-user"></i> Profile</a>
+        <a href="../index.html" class="btn btn-outline"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+
+      <div id="menu-toggle" class="mobile-menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROFILE CARD -->
+  <main class="container">
+    <div class="profile-card">
+
+      <!-- Profile Header -->
+      <div class="profile-header">
+        <div class="profile-photo">
+          <img id="profilePreview" src="../img/default-user.png" alt="Profile">
+        </div>
+        <h2 id="displayName">Your Name</h2>
+        <p id="displayEmail">your@email.com</p>
+      </div>
+
+      <!-- VIEW MODE -->
+      <div id="profileView" class="profile-view">
+        <h3>Profile Details</h3>
+
+        <div class="info-row"><strong>Full Name:</strong> <span id="v_fullName"></span></div>
+        <div class="info-row"><strong>Email:</strong> <span id="v_email"></span></div>
+        <div class="info-row"><strong>Phone:</strong> <span id="v_phone"></span></div>
+        <div class="info-row"><strong>Gender:</strong> <span id="v_gender"></span></div>
+        <div class="info-row"><strong>DOB:</strong> <span id="v_dob"></span></div>
+        <div class="info-row"><strong>Address:</strong> <span id="v_address"></span></div>
+        <div class="info-row"><strong>City:</strong> <span id="v_city"></span></div>
+        <div class="info-row"><strong>State:</strong> <span id="v_state"></span></div>
+        <div class="info-row"><strong>Pincode:</strong> <span id="v_pincode"></span></div>
+        <div class="info-row"><strong>ID Type:</strong> <span id="v_idType"></span></div>
+        <div class="info-row"><strong>ID Number:</strong> <span id="v_idNumber"></span></div>
+        <div class="info-row"><strong>Emergency Contact:</strong> <span id="v_emergencyContact"></span></div>
+        <div class="info-row"><strong>Emergency Phone:</strong> <span id="v_emergencyPhone"></span></div>
+
+        <button id="editBtn" class="btn btn-primary" style="margin-top:20px;">
+          <i class="fas fa-edit"></i> Edit Profile
+        </button>
+      </div>
+
+      <!-- EDIT MODE (FORM) -->
+      <form id="profileForm" class="profile-form" style="display:none">
+
+        <label>Full Name</label>
+        <input type="text" id="fullName" required>
+
+        <label>Email Address</label>
+        <input type="email" id="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" maxlength="10" required>
+
+        <label>Gender</label>
+        <select id="gender" required>
+          <option value="">Select...</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label>Date of Birth</label>
+        <input type="date" id="dob" required>
+
+        <label>Address</label>
+        <textarea id="address" rows="3" required></textarea>
+
+        <label>City</label>
+        <input type="text" id="city" required>
+
+        <label>State</label>
+        <input type="text" id="state" required>
+
+        <label>Pincode</label>
+        <input type="text" id="pincode" maxlength="6" required>
+
+        <label>ID Type</label>
+        <select id="idType" required>
+          <option value="">Select...</option>
+          <option value="aadhaar">Aadhaar</option>
+          <option value="pan">PAN</option>
+          <option value="passport">Passport</option>
+          <option value="voter">Voter ID</option>
+        </select>
+
+        <label>ID Number (Last 4 digits)</label>
+        <input type="text" id="idNumber" maxlength="4" required>
+
+        <label>Emergency Contact Name</label>
+        <input type="text" id="emergencyContact" required>
+
+        <label>Emergency Contact Number</label>
+        <input type="tel" id="emergencyPhone" maxlength="10" required>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </form>
+
+    </div>
+  </main>
+
+</body>
+</html>

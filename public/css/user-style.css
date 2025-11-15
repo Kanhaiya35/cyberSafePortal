@@ -1,0 +1,229 @@
+/* ==================== ROOT VARIABLES ==================== */
+:root {
+    --primary: #1e3a8a;
+    --primary-light: #3b82f6;
+    --secondary: #0d9488;
+
+    --success: #16a34a;
+    --danger: #dc2626;
+
+    --text: #1f2937;
+    --text-light: #6b7280;
+
+    --bg: #ffffff;
+    --bg-light: #f9fafb;
+    --bg-dark: #111827;
+
+    --radius: 10px;
+    --shadow: 0 4px 12px rgba(0,0,0,.08);
+    --transition: .3s ease;
+
+    --font: "Segoe UI", Arial, sans-serif;
+}
+
+/* ==================== BASE ==================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font);
+    background: var(--bg-light);
+    color: var(--text);
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    background: var(--bg);
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--primary-light);
+}
+
+/* Actions (Profile + Logout) */
+.nav-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-actions a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-actions a i {
+    font-size: 18px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* Mobile Menu */
+.mobile-menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+/* ==================== MAIN CONTENT ==================== */
+main h1 {
+    margin-top: 25px;
+    font-size: 32px;
+    color: var(--primary);
+}
+
+main p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+/* ==================== REPORT INCIDENT FORM ==================== */
+#reportIncidentForm {
+    background: var(--bg);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+#reportIncidentForm h2 {
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 26px;
+}
+
+#reportIncidentForm label {
+    font-weight: 600;
+}
+
+#reportIncidentForm input,
+#reportIncidentForm select,
+#reportIncidentForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: var(--radius);
+    border: 1.5px solid #d1d5db;
+    font-size: 15px;
+}
+
+#reportIncidentForm textarea {
+    resize: vertical;
+}
+
+.btn-success {
+    background: var(--success);
+    color: #fff;
+    padding: 12px 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--radius);
+    font-size: 16px;
+}
+
+.btn-success:hover {
+    background: #0e8c36;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background: var(--bg-dark);
+    color: #ddd;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer .logo {
+    color: #fff;
+}
+
+.footer p {
+    margin-top: 15px;
+    color: #aaa;
+}
+
+/* ==================== MOBILE RESPONSIVE ==================== */
+@media (max-width: 768px) {
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .nav-links.active,
+    .nav-actions.active {
+        display: flex !important;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+        gap: 15px;
+        margin-top: 15px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+    }
+
+    main h1 {
+        font-size: 26px;
+    }
+}

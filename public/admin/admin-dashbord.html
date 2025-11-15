@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | CyberSafe Portal</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+      <a href="../index.html" class="logo">
+        <i class="fas fa-shield-alt"></i> CyberSafe Admin
+      </a>
+      <div class="nav-actions">
+        <a href="../logout" class="btn btn-outline">Logout</a>
+        <a href="adminprofile.html" class="btn btn-outline">Profile</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Dashboard -->
+  <main class="container dashboard">
+    <h1 class="dashboard-title">Case Management Panel</h1>
+    
+    <div class="kanban-board">
+      <!-- NEW -->
+      <div class="kanban-column" id="new">
+        <h2>New / Pending</h2>
+
+        <div class="case-card">
+          <div class="card-header">
+            <span class="token">#ABC123</span>
+            <span class="badge badge-low">Low</span>
+          </div>
+          <p class="type">Phishing Scam</p>
+          <p class="reporter">Reported by: Harsh Nilve</p>
+          <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          <div class="card-actions">
+            <button class="move-btn" data-target="in-progress">Assign</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- IN PROGRESS -->
+      <div class="kanban-column" id="in-progress">
+        <h2>In Progress</h2>
+
+        <div class="case-card">
+          <div class="card-header">
+            <span class="token">#GHI789</span>
+            <span class="badge badge-high">High</span>
+          </div>
+          <p class="type">Ransomware Attack</p>
+          <p class="reporter">Reported by: Varun Sharma</p>
+          <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          <div class="card-actions">
+            <button class="move-btn" data-target="completed">Mark Completed</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COMPLETED -->
+      <div class="kanban-column" id="completed">
+        <h2>Completed</h2>
+
+        <div class="case-card">
+          <div class="card-header">
+            <span class="token">#JKL012</span>
+            <span class="badge badge-high">High</span>
+          </div>
+          <p class="type">Identity Theft</p>
+          <p class="reporter">Reported by: Chetan Patil</p>
+          <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          <div class="card-actions">
+            <button class="move-btn" data-target="new">Reopen</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2025 CyberSafe Portal Admin Panel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/admin.js"></script>
+
+</body>
+</html>

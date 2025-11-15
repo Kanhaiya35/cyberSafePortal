@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Profile | CyberSafe Portal</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Global Style -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Admin Profile Style -->
+  <link rel="stylesheet" href="../css/admin-profile.css">
+
+  <!-- JS -->
+  <script src="../js/admin-profile.js" defer></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+      <a href="dashboard.html" class="logo"><i class="fas fa-shield-alt"></i> CyberSafe Admin</a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="adminprofile.html" class="active">Profile</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../logout" class="btn btn-outline"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Card -->
+  <main class="container">
+    <div class="profile-card">
+
+      <!-- Profile Header -->
+      <div class="profile-header">
+        <div class="profile-photo">
+          <img id="profilePreview" src="../img/default-user.png" alt="Admin">
+          <label class="upload-btn">
+            <i class="fas fa-camera"></i>
+            <input type="file" id="profilePicture" accept="image/*">
+          </label>
+        </div>
+        <h2 id="adminDisplayName">Admin Name</h2>
+        <p id="adminDisplayEmail">admin@email.com</p>
+      </div>
+
+      <!-- Statistics -->
+      <div class="stats-box">
+        <div class="stat-item">
+          <h3 id="statAssigned">0</h3>
+          <p>Assigned Cases</p>
+        </div>
+        <div class="stat-item">
+          <h3 id="statResolved">0</h3>
+          <p>Resolved Cases</p>
+        </div>
+        <div class="stat-item">
+          <h3 id="statLogin">Today</h3>
+          <p>Last Login</p>
+        </div>
+      </div>
+
+      <!-- Profile Form -->
+      <form id="adminProfileForm" class="profile-form">
+
+        <h3>Admin Details</h3>
+
+        <label>Full Name</label>
+        <input type="text" id="adminName" required>
+
+        <label>Email Address</label>
+        <input type="email" id="adminEmail" required>
+
+        <label>Phone Number</label>
+        <input type="tel" id="adminPhone" maxlength="10" required>
+
+        <label>Designation</label>
+        <input type="text" id="designation" placeholder="e.g., Case Manager" required>
+
+        <label>Department</label>
+        <input type="text" id="department" placeholder="e.g., Cybercrime Division" required>
+
+        <label>Admin ID</label>
+        <input type="text" id="adminId" required>
+
+        <label>Total Assigned Cases</label>
+        <input type="number" id="assignedCases" readonly>
+
+        <label>Cases Resolved</label>
+        <input type="number" id="resolvedCases" readonly>
+
+        <label>Last Login</label>
+        <input type="text" id="lastLogin" readonly>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </form>
+
+    </div>
+  </main>
+
+</body>
+</html>

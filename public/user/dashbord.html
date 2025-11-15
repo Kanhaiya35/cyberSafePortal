@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Dashboard | CyberSafe Portal</title>
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/user-style.css">
+
+  <!-- JS -->
+  <script src="../js/dashboard.js" defer></script>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+
+      <!-- Logo -->
+      <a href="../home/index.html" class="logo">
+        <i class="fas fa-shield-alt"></i> CyberSafe
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="track-case.html">Track Case</a></li>
+        <li><a href="my-reports.html">My Reports</a></li>
+      </ul>
+
+      <!-- Buttons (Profile + Logout) -->
+      <div class="nav-actions">
+        <a href="profile.html" class="btn btn-outline">
+          <i class="fas fa-user-circle"></i> Profile
+        </a>
+
+        <a href="../index.html" class="btn btn-outline">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </div>
+
+      <!-- Mobile Menu Icon -->
+      <div class="mobile-menu-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN SECTION ==================== -->
+  <main class="container">
+    <h1>Welcome, Harsh</h1>
+    <p>Overview of your case statistics and quick actions.</p>
+
+    <!-- ==================== Report Incident Form ==================== -->
+    <section id="reportIncidentForm" style="margin-top:20px; background:#f9f9f9; padding:20px; border-radius:8px;">
+      <h2>Report a Cyber Incident</h2>
+
+      <form action="submit-report.php" method="POST" enctype="multipart/form-data">
+
+        <label for="incidentType">Type of Incident:</label><br/>
+        <select id="incidentType" name="incidentType" required>
+          <option value="">Select...</option>
+          <option value="phishing">Phishing</option>
+          <option value="malware">Malware</option>
+          <option value="account-hacked">Account Hacked</option>
+          <option value="financial-fraud">Financial Fraud</option>
+          <option value="cyberbullying">Cyberbullying</option>
+          <option value="other">Other</option>
+        </select><br/><br/>
+
+        <label for="incidentDesc">Describe the Incident:</label><br/>
+        <textarea id="incidentDesc" name="incidentDesc" rows="5" required></textarea><br/><br/>
+
+        <label for="date">Date of Incident:</label><br/>
+        <input type="date" id="date" name="date" required><br/><br/>
+
+        <label for="contactEmail">Contact Email:</label><br/>
+        <input type="email" id="contactEmail" name="contactEmail" required><br/><br/>
+
+        <label for="incidentFiles">Upload Evidence (images, videos, docs):</label><br/>
+        <input type="file" id="incidentFiles" name="incidentFiles[]" accept="image/*,video/*,.pdf,.doc,.docx,.xls,.xlsx,.txt" multiple><br/><br/>
+
+        <button class="btn btn-success" type="submit">Submit Report</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+
+        <div class="footer-section">
+          <div class="logo">
+            <i class="fas fa-shield-alt"></i>
+            <span>CyberSafe Portal</span>
+          </div>
+          <p>An initiative to combat cybercrime and ensure digital safety for all citizens.</p>
+        </div>
+
+        <p>&copy; 2025 CyberSafe Portal. All rights reserved. | Designed for public safety and digital security.</p>
+
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
